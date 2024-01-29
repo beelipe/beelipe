@@ -95,82 +95,87 @@
             <div class="colourBar">    
         </section>
         <section class="contentBlock">
-            <section class="contentColumn">
-                <div class="textBlock">
-                    <div class="formRow">
-                        <label class="twoCol" for="name"><input type="text" name="name" value="Bitte Namen eingeben" onfocus="this.value=''"></label>
-                    </div>
-                </div>
-                <div class="textBlock">
-                        Ich komme 
-                    <div class="formRow">
-                        <div>
-                            <label for="alone"><input type="radio" name="party"> …alleine</label>
-                        </div>
-                        <div>
-                            <label for="plusOne"><input type="radio" name="party"> …mit Begleitung</label>
-                        </div>
-                        <div>
-                            <label for="family"><input type="checkbox" name="kids"> …mit <label for="amountKids"><input type="number" id="amountKids" name="amountKids" value="0" min="0" max="5"> Kindern</label></label>
+            <form
+            action="https://formspree.io/f/meqyewej"
+            method="POST"
+            >   
+                <section class="contentColumn">
+                    <div class="textBlock">
+                        <div class="formRow">
+                            <label class="twoCol" for="name"><input type="text" name="name" value="Bitte Namen eingeben" onfocus="this.value=''"></label>
                         </div>
                     </div>
-                </div>
-                <div class="textBlock">
-                    <div>
-                        Ich esse 
-                    </div>
-                    <div class="formRow">
-                        <div>
-                            <label for="vegan"><input type="radio" name="food"> …vegan</label>
-                        </div>
-                        <div>
-                            <label for="omni"><input type="radio" name="food"> …omni</label>
-                        </div> 
-                    </div>
-                </div>
-                <div class="textBlock">
-                    <div>
-                        Meine Begleitung isst
-                    </div>
-                    <div class="formRow">
-                        <div>
-                            <label for="plusOneVegan"><input type="radio" name="plusOneFood"> …vegan</label>
-                        </div>
-                        <div>
-                            <label for="plusOneOmni"><input type="radio" name="plusOneFood"> …omni</label>
+                    <div class="textBlock">
+                            Ich komme 
+                        <div class="formRow">
+                            <div>
+                                <label for="alone"><input type="radio" name="party"> …alleine</label>
+                            </div>
+                            <div>
+                                <label for="plusOne"><input type="radio" name="party"> …mit Begleitung</label>
+                            </div>
+                            <div>
+                                <label for="family"><input type="checkbox" name="kids"> …mit <label for="amountKids"><input type="number" id="amountKids" name="amountKids" value="0" min="0" max="5"> Kindern</label></label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="textBlock">
-                    <div>
-                        Ich reise 
-                    </div>
-                    <div class="formRow">
+                    <div class="textBlock">
                         <div>
-                            <label for="fromFriday"><input type="radio" name="checkin"> …am Freitag an</label>
+                            Ich esse 
                         </div>
+                        <div class="formRow">
+                            <div>
+                                <label for="vegan"><input type="radio" name="food"> …vegan</label>
+                            </div>
+                            <div>
+                                <label for="omni"><input type="radio" name="food"> …omni</label>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="textBlock">
                         <div>
-                            <label for="fromSaturday"><input type="radio" name="checkin"> …am Samstag an</label>
+                            Meine Begleitung isst
+                        </div>
+                        <div class="formRow">
+                            <div>
+                                <label for="plusOneVegan"><input type="radio" name="plusOneFood"> …vegan</label>
+                            </div>
+                            <div>
+                                <label for="plusOneOmni"><input type="radio" name="plusOneFood"> …omni</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="textBlock">
-                    <div>
-                        <label for="allergies">Mitteilungen, beispielsweise Allergien:</label>
+                    <div class="textBlock">
+                        <div>
+                            Ich reise 
+                        </div>
+                        <div class="formRow">
+                            <div>
+                                <label for="fromFriday"><input type="radio" name="checkin"> …am Freitag an</label>
+                            </div>
+                            <div>
+                                <label for="fromSaturday"><input type="radio" name="checkin"> …am Samstag an</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="formRow">
-                        <label class="twoCol" for="name"><textarea id="multiLineField" name="messages"></textarea>
+                    <div class="textBlock">
+                        <div>
+                            <label for="allergies">Mitteilungen, beispielsweise Allergien:</label>
+                        </div>
+                        <div class="formRow">
+                            <label class="twoCol" for="name"><textarea id="multiLineField" name="messages"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="textBlock adjustDown">
-                    <div>
-                        <label for="cantCome"><input type="radio" name="party"> Ich kann leider nicht kommen</label>
+                    <div class="textBlock adjustDown">
+                        <div>
+                            <label for="cantCome"><input type="radio" name="party"> Ich kann leider nicht kommen</label>
+                        </div>
                     </div>
-                </div>
+                    
+                        <button class="button" id="sendButton">Absenden</button>
                 
-                    <button class="button" id="sendButton">Absenden</button>
-            
-            </section>
+                </section>
+            </form>
             <section class="contentColumn">
                 <div class="smallImg">
                     <img class = "adjustRight" src="./img/hotel_klein.jpg" alt="Hotel Piz Linard in Lavin" height="100%" width="100%">
