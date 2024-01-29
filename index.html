@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>13 Jahre Emilie & Reto</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <article class="viewport">
+        <section class="title">
+            <h2>Du bist eingeladen</h2>
+            <div class="colourBar">    
+            </div>
+        </section>
+    </article>
+    <article class = "viewport">
+        <section class="title" id="title2">
+            <h2>...zu einem Fest der <span class="avoidwrap">Freund:innen und Familie.</span></h2>
+            <div class="colourBar">    
+            </div>
+        </section>
+        <section class="contentBlock">
+            <div class="bigImg">
+                <img src="./img/hotel.jpg" alt="Hotel Piz Linard in Lavin" width="100%" height="100%">
+            </div>
+        </section>
+    </article>
+    <article class = "viewport">
+        <section class="title">
+            <h1>13 Jahre Emilie & Reto </h1>
+            <div class="colourBar">    
+            </div>
+        </section>
+        <section class="contentBlock">
+            <div class="contentColumn">
+                <div class="textBlock">
+                    <h3>Freitag, 13. – Sonntag, 15. September 2024</h3>
+                </div>
+                <div class="textBlock adjustDown">
+                    <div class="scheduleBlock">
+                        <div class="scheduleRow">
+                            <div>
+                                <p>Freitag</p>
+                            </div>
+                          <div> 
+                                <p>individuelle Anreise, gemeinsames Abendessen.</p>
+                            </div>
+                        </div>
+                        <div class="scheduleRow">
+                            <div>
+                                <p>Samstag</p>
+                            </div>
+                            <div>
+                                <p>Frühstück, individuelles Tagesprogramm, wie Wandern,
+                                Museum, Hallenbad, MoMos im Kunst Cafe Samedan,
+                                gemeinsames Festessen am Abend.</p>
+                            </div>
+                        </div>
+                        <div class="scheduleRow">
+                            <div>
+                                <p>Sonntag</p>
+                            </div>                           
+                            <div> 
+                                <p>Frühstück, Individuelle Rückreise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="textBlock">
+                    <div class="scheduleBlock adjustRight">
+                        <br />
+                        <p>Hotel Linard Lavin <br />
+                        Plazza Gronda 2<br />
+                        7543 Lavin<br />
+                        <a href="https://www.linardlavin.ch" target="_blank">www.linardlavin.ch<br /></a>    
+                        <a href="https://maps.app.goo.gl/ydMhZbVBHcGtgtke7" target="_blank">Google Maps</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contentColumn">
+                <div class="smallImg">
+                    <img class = "adjustRight" src="./img/hotel_klein.jpg" alt="Hotel Piz Linard in Lavin"  width="100%" height="100%">
+                </div>
+            </div>
+        </section>
+    </article>
+    <article class = "viewport rowGrid">
+        <section class="title" id="title4">
+            <h2>Anmeldung</h2>
+            <div class="colourBar">    
+        </section>
+        <section class="contentBlock">
+            <section class="contentColumn">
+                <div class="textBlock">
+                    <div class="formRow">
+                        <label class="twoCol" for="name"><input type="text" name="name" value="Bitte Namen eingeben" onfocus="this.value=''"></label>
+                    </div>
+                </div>
+                <div class="textBlock">
+                        Ich komme 
+                    <div class="formRow">
+                        <div>
+                            <label for="alone"><input type="radio" name="party"> …alleine</label>
+                        </div>
+                        <div>
+                            <label for="plusOne"><input type="radio" name="party"> …mit Begleitung</label>
+                        </div>
+                        <div>
+                            <label for="family"><input type="checkbox" name="kids"> …mit <label for="amountKids"><input type="number" id="amountKids" name="amountKids" value="0" min="0" max="5"> Kindern</label></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="textBlock">
+                    <div>
+                        Ich esse 
+                    </div>
+                    <div class="formRow">
+                        <div>
+                            <label for="vegan"><input type="radio" name="food"> …vegan</label>
+                        </div>
+                        <div>
+                            <label for="omni"><input type="radio" name="food"> …omni</label>
+                        </div> 
+                    </div>
+                </div>
+                <div class="textBlock">
+                    <div>
+                        Meine Begleitung isst
+                    </div>
+                    <div class="formRow">
+                        <div>
+                            <label for="plusOneVegan"><input type="radio" name="plusOneFood"> …vegan</label>
+                        </div>
+                        <div>
+                            <label for="plusOneOmni"><input type="radio" name="plusOneFood"> …omni</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="textBlock">
+                    <div>
+                        Ich reise 
+                    </div>
+                    <div class="formRow">
+                        <div>
+                            <label for="fromFriday"><input type="radio" name="checkin"> …am Freitag an</label>
+                        </div>
+                        <div>
+                            <label for="fromSaturday"><input type="radio" name="checkin"> …am Samstag an</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="textBlock">
+                    <div>
+                        <label for="allergies">Mitteilungen, beispielsweise Allergien:</label>
+                    </div>
+                    <div class="formRow">
+                        <label class="twoCol" for="name"><textarea id="multiLineField" name="messages"></textarea>
+                    </div>
+                </div>
+                <div class="textBlock adjustDown">
+                    <div>
+                        <label for="cantCome"><input type="radio" name="party"> Ich kann leider nicht kommen</label>
+                    </div>
+                </div>
+                
+                    <button class="button" id="sendButton">Absenden</button>
+            
+            </section>
+            <section class="contentColumn">
+                <div class="smallImg">
+                    <img class = "adjustRight" src="./img/hotel_klein.jpg" alt="Hotel Piz Linard in Lavin" height="100%" width="100%">
+                </div>
+                <div class="textBlock">
+                    <h3>Geschenke</h3>
+                    <p>Wir sind wunschlos glücklich und eure Anwesenheit ist Geschenk genug. Sollte dir das trotzdem schlaflose Nächte bereitet, 
+                        kannst du uns gerne einen Betrag nach deinem Ermessen an 079 349 47 34 twinten.</p>
+                </div>
+            </section>
+        </section>
+        <section class="modal" id="thankYou">
+            <div class="modalContent">
+                <div class="contentBlock flexReverse">
+                    <div class="contentColumn">
+                        <img src="./img/familie.jpg" alt="Les bel-chos sur une montagne" height="100%" width="100%">
+                    </div>
+                    <div class="contentColumn">
+                        <div class="textBlock adjustDown adjustRight">
+                            <span class="closeButton" id="closeButton">
+                                <svg id="closeCross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 46" fill="none">
+                                    <line x1="4.06066" y1="1.93934" x2="46.4871" y2="44.3657"/>
+                                    <line x1="1.93934" y1="43.9393" x2="44.3657" y2="1.51293"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="textBlock addPaddingBottom">
+                            <h4>
+                                Danke,<br />
+                                vier freuen uns auf dich. <br />
+                                <br />
+                                Emilie, Serge, Gaston & Reto
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+	<script src="js/scripts.js"></script>
+  </body>
+</html>
