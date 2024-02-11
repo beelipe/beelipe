@@ -1,34 +1,8 @@
-// Get the modal
-var modal = document.getElementById("thankYou");
-
-// Get the button that opens the modal
-var btn = document.getElementById("sendButton");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("closeButton")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 const elements = document.querySelectorAll('.viewport');
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: .4
+  threshold: .5
 }
 const callbacks = (entries) => {
   entries.forEach(entry => {
@@ -40,4 +14,26 @@ const callbacks = (entries) => {
 let observer = new IntersectionObserver(callbacks, options);
 elements.forEach(element => {
   observer.observe(element);
+});
+
+/* Name Validation */
+function success() {
+  if((document.getElementById("formName").value==="") || (document.getElementById("formName").value==="Bitte Namen eingeben")) { 
+    alert("true");
+    document.getElementById('sendButton').disabled = true; 
+  } else { 
+    document.getElementById('sendButton').disabled = false;
+  }
+};
+
+/* Side Scroller Fotobar */
+let fotoBanner1 = document.getElementById('fotoBanner1');
+let fotoBanner2 = document.getElementById('fotoBanner2');
+
+window.addEventListener('scroll', () => {
+  let { scrollY } = window;
+  if ( window.innerWidth < 600 ) {
+    fotoBanner1.style.marginLeft = -0.25 * scrollY + 'px';
+    fotoBanner2.style.marginLeft = -0.15 * scrollY + (window.innerWidth/5) + 'px';
+  }
 });

@@ -2,47 +2,61 @@
   reset browser CSS
 */
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
+   box-sizing: border-box;
+}
   
-  * {
-    margin: 0;
-  }
+* {
+   margin: 0;
+}
   
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+}
   
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover;
+}
   
-  input, button, textarea, select {
-    font: inherit;
-  }
+input, button, textarea, select {
+   font: inherit;
+}
   
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
   
-  #root, #__next {
-    isolation: isolate;
-  }
+#root, #__next {
+   isolation: isolate;
+}
 
-  :root{
-    --main-bg-color: #F9F9F9;
-    --accent-color: #E4CCCF;
-    --font-color: #0A0A0A;
-    --border-color: #0A0A0A;    
+:root{
+   --main-bg-color: #F9F9F9;
+   --accent-color: #E4CCCF;
+   --font-color: #0A0A0A;
+   --border-color: #0A0A0A;    
+}
+
+@keyframes infiniteScroll {
+   from {
+    transform: translateX(0); 
+  }
+   to {
+    transform: translateX(calc(0px - 50%));
+  }
 }
   
 @media only screen and (max-width: 599px){ 
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   h1, h2 {
@@ -147,11 +161,34 @@
     padding-bottom: 2rem;
   }
 
+  .fotoBanner{
+    width: 160%;
+  }
+
+  #fotoBanner3{
+    animation-name: infiniteScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    flex-wrap: nowrap;
+    width: 320%;
+  }
+
+  .marquee {
+    display: block;
+  }
 }
   
 @media only screen and (min-width: 600px) {
+  body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   h1, h2 {
@@ -167,10 +204,11 @@
   }
 
   .viewport {
-    height: 80vw;
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 27rem auto 27rem;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 26rem auto 13rem;
     column-gap: 1.25rem;
     row-gap: 0;
   }
@@ -191,7 +229,7 @@
 
   #title4 {
     padding-top: 4.6875rem; 
-    grid-column-end: 4;
+    grid-column-end: 5;
   }
 
   .contentBlock{
@@ -233,7 +271,8 @@
   }
 
   .rowGrid {
-    grid-template-rows: 13.125rem auto 1fr; 
+    height: fit-content;
+    grid-template-rows: 13rem auto 6rem; 
   }
 
   .button {
@@ -253,11 +292,19 @@
     width: 3rem;
     height: 3rem;
   }
+
+  .fotoBanner{
+    width: 100%;
+  }
+
+  .marquee{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   h1, h2 {
@@ -271,8 +318,7 @@
 
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 16px;
-    max-width: 1440px;
+    font-size: 18px;
   }
 
   h1, h2 {
@@ -286,15 +332,9 @@ html {
     font-family: 'Lora', serif;
 }
 
-body {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-.viewport{
+.viewport {
     opacity: 0;
-    transform: translateY(40%);
+    transform: translateY(30%);
     transition: all 2s ease-out;    
 }
 
@@ -440,7 +480,7 @@ textarea {
 }
 
 .modal {
-  display: none; 
+  display: block; 
   position: fixed;
   z-index: 99;
   left: 0;
@@ -460,4 +500,36 @@ textarea {
 .active {
   opacity: 4;
   transform: translateY(0);
+}
+
+.fotoBanner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  height: min-content;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.fotoBannerColorBar {
+  height: 3rem;
+  width: 100%;
+  background-image: linear-gradient(180deg, var(--main-bg-color), var(--accent-color));
+}
+
+.fotoBannerColorBarReverse{
+  height: 3rem;
+  width: 100%;
+  background-image: linear-gradient(360deg, var(--main-bg-color), var(--accent-color));
+}
+
+.fotoBannerImg{
+  width: 20%;
+  justify-content: center;
+}
+
+#bannerImg{
+  width: 100%;
+  height: 100%;
 }

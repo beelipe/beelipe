@@ -30,6 +30,27 @@
             </div>
         </section>
     </article>
+    <section class="fotoBanner" id="fotoBanner1">
+        <div class="fotoBannerColorBar">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/1.jpg" alt="Les bel-chos en party">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/2.jpg" alt="Les bel-chos en ZFF">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/3.jpg" alt="Les bel-chos courent vites">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/4.jpg" alt="Les bel-chos en Winterthurer Musikfestwochen">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/15.jpg" alt="Les bel-chos sont sérieux">
+        </div>
+        <div class="fotoBannerColorBarReverse">
+        </div>
+    </section>
     <article class = "viewport">
         <section class="title">
             <h1>13 Jahre Emilie & Reto </h1>
@@ -89,132 +110,186 @@
             </div>
         </section>
     </article>
-    <article class = "viewport rowGrid">
+    <section class="fotoBanner" id="fotoBanner2">
+        <div class="fotoBannerColorBar">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/6.jpg" alt="Les bel-chos sont en train de marcher">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/7.jpg" alt="Les bel-chos partent en randonnée">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/14.jpg" alt="Les bel-chos visitent le tour d'eiffel">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/10.jpg" alt="Les bel-chos on haut d'un gratte-ciel">
+        </div>
+        <div class="fotoBannerImg">
+            <img id="bannerImg" src="./img/rando/9.jpg" alt="Les bel-chos faisent de grimaces devant le tour d'eiffel">
+        </div>
+        <div class="fotoBannerColorBarReverse">
+        </div>
+    </section>
+    <article class = "viewport rowGrid" id="formView">
         <section class="title" id="title4">
             <h2>Anmeldung</h2>
             <div class="colourBar">    
         </section>
-        <section class="contentBlock">
-            <form
-            action="https://formspree.io/f/meqyewej"
-            method="POST"
-            >   
+        <section class="contentBlock"> 
                 <section class="contentColumn">
-                    <div class="textBlock">
-                        <div class="formRow">
-                            <label class="twoCol" for="name"><input type="text" name="name" value="Bitte Namen eingeben" onfocus="this.value=''"></label>
-                        </div>
-                    </div>
-                    <div class="textBlock">
-                            Ich komme 
-                        <div class="formRow">
-                            <div>
-                                <label for="alone"><input type="radio" name="party"> …alleine</label>
-                            </div>
-                            <div>
-                                <label for="plusOne"><input type="radio" name="party"> …mit Begleitung</label>
-                            </div>
-                            <div>
-                                <label for="family"><input type="checkbox" name="kids"> …mit <label for="amountKids"><input type="number" id="amountKids" name="amountKids" value="0" min="0" max="5"> Kindern</label></label>
+                    <form
+                    class = "contentColumn"
+                    action="https://formspree.io/f/meqyewej"
+                    method="POST"
+                    >
+                        <div class="textBlock">
+                            <div class="formRow">
+                                <label class="twoCol" for="formName">
+                                    <input type="text" id="formName" name="Mein Name" value="Bitte Namen eingeben" autocomplete="given-name" onfocus="this.value=''" onkeyup="success()">
+                                </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="textBlock">
-                        <div>
-                            Ich esse 
-                        </div>
-                        <div class="formRow">
-                            <div>
-                                <label for="vegan"><input type="radio" name="food"> …vegan</label>
-                            </div>
-                            <div>
-                                <label for="omni"><input type="radio" name="food"> …omni</label>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="textBlock">
-                        <div>
-                            Meine Begleitung isst
-                        </div>
-                        <div class="formRow">
-                            <div>
-                                <label for="plusOneVegan"><input type="radio" name="plusOneFood"> …vegan</label>
-                            </div>
-                            <div>
-                                <label for="plusOneOmni"><input type="radio" name="plusOneFood"> …omni</label>
+                        <div class="textBlock">
+                                Ich komme 
+                            <div class="formRow">
+                                <div>
+                                    <label for="travelPartyAlone">
+                                        <input type="radio" id="travelPartyAlone" name="Meine Reisegruppe" value="Ich komme alleine"> alleine
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="travelPartyCompany">
+                                        <input type="radio" id="travelPartyCompany" name="Meine Reisegruppe" value="Ich komme mit Begleitung"> mit Begleitung
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="familyCheck">
+                                        <input type="checkbox" id="familyCheck" name="Familie" value="Ich bringe Kinder mit"> mit 
+                                            <label for="amountKids">
+                                                <input type="number" id="amountKids" name="Anzahl Kinder" value="0" min="0" max="5"> Kindern
+                                            </label>
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="textBlock">
-                        <div>
-                            Ich reise 
-                        </div>
-                        <div class="formRow">
+                        <div class="textBlock">
                             <div>
-                                <label for="fromFriday"><input type="radio" name="checkin"> …am Freitag an</label>
+                                Ich esse 
                             </div>
+                            <div class="formRow">
+                                <div>
+                                    <label for="iEatVegan">
+                                        <input type="radio" id="iEatVegan" name="Ich esse" value="vegan"> vegan
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="iEatOmni">
+                                        <input type="radio" id="iEatOmni" name="Ich esse" value="omni"> omni
+                                    </label>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="textBlock">
                             <div>
-                                <label for="fromSaturday"><input type="radio" name="checkin"> …am Samstag an</label>
+                                Meine Begleitung isst
+                            </div>
+                            <div class="formRow">
+                                <div>
+                                    <label for="companyEatsVegan">
+                                        <input type="radio" id="companyEatsVegan" name="Meine Begleitung isst" value="vegan"> vegan
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="companyEatsOmni">
+                                        <input type="radio" id="companyEatsOmni" name="Meine Begleitung isst" value="omni"> omni
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="textBlock">
-                        <div>
-                            <label for="allergies">Mitteilungen, beispielsweise Allergien:</label>
+                        <div class="textBlock">
+                            <div>
+                                Ich reise 
+                            </div>
+                            <div class="formRow">
+                                <div>
+                                    <label for="checkInFriday">
+                                        <input type="radio" id="checkInFriday" name="Anreise am" value="Freitag"> am Freitag an
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="checkInSaturday">
+                                        <input type="radio" id="checkInSaturday" name="Anreise am" value="Samstag"> am Samstag an
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="formRow">
-                            <label class="twoCol" for="name"><textarea id="multiLineField" name="messages"></textarea>
+                        <div class="textBlock">
+                            <div>
+                                Mitteilungen, beispielsweise Allergien:
+                            </div>
+                            <div class="formRow">
+                                <label class="twoCol" for="multiLineField">
+                                    <textarea id="multiLineField" name="Mitteilungen oder Allegerien"></textarea>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="textBlock adjustDown">
-                        <div>
-                            <label for="cantCome"><input type="radio" name="party"> Ich kann leider nicht kommen</label>
-                        </div>
-                    </div>
-                    
-                        <button class="button" id="sendButton" type="submit">Absenden</button>
-                
+                        <div class="textBlock adjustDown">
+                            <div>
+                                <label for="travelPartyCantCome">
+                                    <input type="radio" id="travelPartyCantCome" name="Meine Reisegruppe" value="Ich komme nicht"> Ich kann leider nicht kommen
+                                </label>
+                            </div>
+                        </div>   
+                        <button class="button" id="sendButton" type="submit" disabled>Absenden</button>
+                    </form>
                 </section>
-            </form>
-            <section class="contentColumn">
-                <div class="smallImg">
-                    <img class = "adjustRight" src="./img/hotel_klein.jpg" alt="Hotel Piz Linard in Lavin" height="100%" width="100%">
-                </div>
-                <div class="textBlock">
-                    <h3>Geschenke</h3>
-                    <p>Wir sind wunschlos glücklich und eure Anwesenheit ist Geschenk genug. Sollte dir das trotzdem schlaflose Nächte bereitet, 
-                        kannst du uns gerne einen Betrag nach deinem Ermessen an 079 349 47 34 twinten.</p>
-                </div>
+                <section class="contentColumn">
+                    <div class="smallImg">
+                        <img class = "adjustRight" src="./img/hotel_klein.jpg" alt="Hotel Piz Linard in Lavin" height="100%" width="100%">
+                    </div>
+                    <div class="textBlock">
+                        <h3>Geschenke</h3>
+                        <p>Wir sind wunschlos glücklich und eure Anwesenheit ist Geschenk genug. Sollte dir das trotzdem schlaflose Nächte bereiten, 
+                            kannst du uns gerne einen Betrag nach deinem Ermessen an 079 349 47 34 twinten.</p>
+                    </div>
+                </section>
             </section>
-        </section>
-        <section class="modal" id="thankYou">
-            <div class="modalContent">
-                <div class="contentBlock flexReverse">
-                    <div class="contentColumn">
-                        <img src="./img/familie.jpg" alt="Les bel-chos sur une montagne" height="100%" width="100%">
-                    </div>
-                    <div class="contentColumn">
-                        <div class="textBlock adjustDown adjustRight">
-                            <span class="closeButton" id="closeButton">
-                                <svg id="closeCross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 46" fill="none">
-                                    <line x1="4.06066" y1="1.93934" x2="46.4871" y2="44.3657"/>
-                                    <line x1="1.93934" y1="43.9393" x2="44.3657" y2="1.51293"/>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="textBlock addPaddingBottom">
-                            <h4>
-                                Danke,<br />
-                                vier freuen uns auf dich. <br />
-                                <br />
-                                Emilie, Serge, Gaston & Reto
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+        </article>
+        <div class="fotoBannerColorBar">
+        </div>
+        <section class="fotoBanner" id="fotoBanner3">
+            <div class="fotoBannerImg">
+                <img id="bannerImg" src="./img/rando/13.jpg" alt="Les bel-chos sont heureuse">
             </div>
-        </section>
-    </article>
+            <div class="fotoBannerImg">
+                <img id="bannerImg" src="./img/rando/12.jpg" alt="Les bel-chos sont à la plage ">
+            </div>
+            <div class="fotoBannerImg">
+                <img id="bannerImg" src="./img/rando/8.jpg" alt="Les bel-chos dans l'hiver">
+            </div>
+            <div class="fotoBannerImg">
+                <img id="bannerImg" src="./img/rando/5.jpg" alt="Les bel-chos sont fiere de Serge">
+            </div>
+            <div class="fotoBannerImg">
+                <img id="bannerImg" src="./img/rando/11.jpg" alt="Les bel-chos dans les montaigne">
+            </div>
+            <div class="fotoBannerImg marquee">
+                <img id="bannerImg" src="./img/rando/13.jpg" alt="Les bel-chos sont heureuse">
+            </div>
+            <div class="fotoBannerImg marquee">
+                <img id="bannerImg" src="./img/rando/12.jpg" alt="Les bel-chos sont à la plage ">
+            </div>
+            <div class="fotoBannerImg marquee">
+                <img id="bannerImg" src="./img/rando/8.jpg" alt="Les bel-chos dans l'hiver">
+            </div>
+            <div class="fotoBannerImg marquee">
+                <img id="bannerImg" src="./img/rando/5.jpg" alt="Les bel-chos sont fiere de Serge">
+            </div>
+            <div class="fotoBannerImg marquee">
+                <img id="bannerImg" src="./img/rando/11.jpg" alt="Les bel-chos dans les montaigne">
+            </div>
+        </section>        
 	<script src="js/scripts.js"></script>
   </body>
 </html>
