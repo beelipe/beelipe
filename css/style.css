@@ -179,6 +179,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .marquee {
     display: none;
   }
+  
+  .nMarquee {
+    display: flex;
+    grid-column-end: span 3;
+  }
 }
   
 @media only screen and (min-width: 600px) {
@@ -304,7 +309,12 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   .marquee{
-    display: block;
+    grid-column-end: span 2;
+    display: flex;
+  }
+
+  .nMarquee{
+    display: none;
   }
 }
 
@@ -483,6 +493,14 @@ textarea {
 
 .adjustDown {
   margin-bottom:auto; 
+}
+
+.adjustNarrow {
+  grid-column-end: span 1; 
+}
+
+.adjustWide {
+  grid-column-end: span 3; 
 }
 
 .modal {
