@@ -32,8 +32,9 @@ let fotoBanner2 = document.getElementById('fotoBanner2');
 
 window.addEventListener('scroll', () => {
   let { scrollY } = window;
+
   if ( window.innerWidth < 600 ) {
-    fotoBanner1.style.marginLeft = -0.25 * scrollY + 'px';
-    fotoBanner2.style.marginLeft = -0.15 * scrollY + (window.innerWidth/5) + 'px';
+    /* fotoBanner1.style.marginLeft = -0.25 * scrollY + 'px';
+    fotoBanner2.style.marginLeft = -0.15 * scrollY + (window.innerWidth/5) + 'px';*/
   }
 });
