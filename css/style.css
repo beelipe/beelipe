@@ -503,6 +503,10 @@ textarea {
   grid-column-end: span 3; 
 }
 
+.limitHeight {
+  max-height: 900px;
+}
+
 .modal {
   display: block; 
   position: fixed;
